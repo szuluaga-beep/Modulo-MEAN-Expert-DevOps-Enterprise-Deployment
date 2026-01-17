@@ -22,14 +22,37 @@
 ### Temas Cubiertos
 
 #### 1. Introducción a DevOps
+
 DevOps es una metodología que combina desarrollo (Dev) y operaciones (Ops) para mejorar la colaboración y automatización en el ciclo de vida del software.
 
-**Referencias:**
-- [DevOps Handbook - Gene Kim, Jez Humble, Patrick Debois, John Willis](https://itrevolution.com/the-devops-handbook/)
-- [The Phoenix Project - Gene Kim](https://itrevolution.com/the-phoenix-project/)
+**Ciclo de Vida DevOps:**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   CICLO DEVOPS                          │
+├─────────────────────────────────────────────────────────┤
+│  Plan → Code → Build → Test → Release → Deploy → Monitor│
+└─────────────────────────────────────────────────────────┘
+```
+
+**Pilares Fundamentales:**
+- Automatización de procesos
+- Integración continua
+- Despliegue continuo
+- Monitorización y feedback
+- Colaboración entre equipos
 
 #### 2. Configuración de Pipelines Básicos
+
 Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue del código.
+
+**Arquitectura de un Pipeline:**
+
+```
+Código → Compilación → Testing → Staging → Producción
+  ↓         ↓            ↓         ↓          ↓
+ Git    Build Logs   Test Reports Deploy Logs Monitoring
+```
 
 **Herramientas Comunes:**
 - GitHub Actions
@@ -37,19 +60,37 @@ Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue 
 - Jenkins
 - CircleCI
 
-**Referencias:**
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
-- [Jenkins Documentation](https://www.jenkins.io/doc/)
+**Documentación Oficial:**
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
+- [Jenkins](https://www.jenkins.io/doc/)
+- [CircleCI](https://circleci.com/docs/)
 
 #### 3. Conceptos Clave
-- **Integración Continua (CI)** - Automatizar pruebas y validaciones
-- **Despliegue Continuo (CD)** - Automatizar el despliegue a producción
-- **Infrastructure as Code (IaC)** - Gestionar infraestructura mediante código
 
-**Referencias:**
-- [Continuous Integration - Martin Fowler](https://martinfowler.com/articles/continuousIntegration.html)
-- [Continuous Delivery - Martin Fowler](https://martinfowler.com/bliki/ContinuousDelivery.html)
+**Integración Continua (CI)**
+```yaml
+Trigger: Push a repositorio
+├── Ejecutar tests automáticos
+├── Validar código
+├── Generar artefactos
+└── Notificar resultados
+```
+
+**Despliegue Continuo (CD)**
+```yaml
+Trigger: Build exitoso
+├── Desplegar a staging
+├── Ejecutar tests de integración
+├── Desplegar a producción
+└── Monitorizar aplicación
+```
+
+**Infrastructure as Code (IaC)**
+- Gestionar infraestructura mediante código
+- Versionado y control de cambios
+- Reproducibilidad y consistencia
+- Automatización de provisioning
 
 ---
 
