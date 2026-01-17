@@ -25,6 +25,9 @@
 
 DevOps es una filosofía cultural que elimina las barreras entre los equipos de desarrollo y operaciones, permitiendo que colaboren estrechamente para optimizar la productividad y confiabilidad. Los equipos trabajan de forma integrada, asumiendo responsabilidad compartida sobre todo el ciclo de vida del software y la infraestructura, pensando siempre en las necesidades del cliente.
 
+<img width="847" height="502" alt="image" src="https://github.com/user-attachments/assets/77be9d49-b48a-4d48-af1f-c2fbc55c8242" />
+
+
 **Cambio Cultural DevOps:**
 - Eliminación las breachas entre desarrollo y operaciones
 - Comunicación frecuente y colaboración constante
