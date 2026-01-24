@@ -9,10 +9,18 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión a MongoDB
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/meandb';
+const MONGODB_URI = process.env.MONGODB_URI;
+if (!MONGODB_URI) {
+  console.error('❌ MONGODB_URI no está definida');
+  process.exit(1);
+}
+
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Conectado a MongoDB'))
-  .catch(err => console.error('❌ Error de conexión:', err));
+  .catch(err => {
+    console.error('❌ Error de conexión:', err);
+    process.exit(1);
+  });
 
 // Modelo simple
 const User = mongoose.model('User', {

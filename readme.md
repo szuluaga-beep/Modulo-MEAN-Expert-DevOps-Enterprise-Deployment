@@ -599,7 +599,8 @@ app.use(cors());
 app.use(express.json());
 
 // Conexión a MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/meandb')
+// Note: En Docker, usa el nombre del servicio (mongodb) en lugar de localhost
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('✅ Conectado a MongoDB'))
   .catch(err => console.error('❌ Error de conexión:', err));
 

@@ -26,7 +26,7 @@ FROM base AS production
 ENV NODE_ENV=production
 COPY package*.json ./
 COPY --from=dependencies /app/node_modules ./node_modules
-COPY --from=build /app/*.js ./
+COPY --from=build /app/ ./
 EXPOSE 3000
 
 # Crear usuario no privilegiado

@@ -86,6 +86,20 @@ docker stats
 
 ## 🔧 Comandos Útiles
 
+### Modo Desarrollo
+
+Para trabajar con hot-reload (recarga automática):
+
+```bash
+# Usar el archivo de compose para desarrollo
+docker-compose -f docker-compose.dev.yml up -d
+
+# Ver logs del backend en desarrollo
+docker-compose -f docker-compose.dev.yml logs -f backend
+
+# Los cambios en ./backend se reflejarán automáticamente
+```
+
 ### Reiniciar Servicios
 
 ```bash
