@@ -5,6 +5,14 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// NOTA: Este es un ejemplo educativo básico.
+// En producción, deberías agregar:
+// - Rate limiting (express-rate-limit)
+// - Validación de entrada
+// - Autenticación y autorización
+// - HTTPS/TLS
+// - Logging y monitoreo
+
 app.use(cors());
 app.use(express.json());
 

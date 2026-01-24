@@ -510,6 +510,33 @@ USER nodejs
 CMD ["node", "server.js"]
 ```
 
+**Consideraciones de Seguridad para Producción:**
+
+⚠️ Los ejemplos de este curso son educativos. Para entornos de producción, debes implementar:
+
+1. **Rate Limiting**: Protección contra ataques de fuerza bruta
+   ```javascript
+   const rateLimit = require('express-rate-limit');
+   const limiter = rateLimit({
+     windowMs: 15 * 60 * 1000, // 15 minutos
+     max: 100 // límite de requests por IP
+   });
+   app.use('/api/', limiter);
+   ```
+
+2. **Validación de Entrada**: Sanitizar todos los datos del usuario
+   ```javascript
+   const { body, validationResult } = require('express-validator');
+   ```
+
+3. **Autenticación y Autorización**: JWT, OAuth, etc.
+4. **HTTPS/TLS**: Nunca usar HTTP en producción
+5. **Secrets Management**: Usar servicios como AWS Secrets Manager
+6. **Logging y Monitoreo**: Detectar actividad sospechosa
+7. **Actualización Regular**: Mantener dependencias actualizadas
+8. **Escaneo de Vulnerabilidades**: Usar herramientas como Snyk o Trivy
+
+
 #### 7. Comandos Docker Esenciales
 
 **Construcción de Imágenes:**
@@ -594,6 +621,9 @@ const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// NOTA: Este es un ejemplo educativo. Para producción, agregar:
+// - Rate limiting, validación, autenticación, HTTPS
 
 app.use(cors());
 app.use(express.json());
