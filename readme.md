@@ -1,137 +1,263 @@
-# Módulo 4: Full Stack MEAN Expert
-## DevOps & Enterprise Deployment
+# Módulo 5: Full Stack MEAN Expert - DevOps & Enterprise Deployment
 
-### Contenido del Módulo
+## 📋 Descripción del Módulo
 
-#### 🎯 Temas Principales
-- **CI/CD, Docker y Kubernetes** - Automatización y orquestación de contenedores
-- **Despliegue en AWS, Railway y Heroku** - Plataformas cloud empresariales
-- **Monitorización, logging y seguridad avanzada** - Observabilidad y protección
-- **Proyecto final empresarial Full Stack** - Defensa técnica incluida
-- **Preparación laboral** - Portafolio, entrevistas y empleabilidad
+Este módulo está diseñado para llevar tus habilidades de desarrollo Full Stack MEAN al siguiente nivel, integrando prácticas profesionales de DevOps, contenedorización, orquestación y despliegue empresarial.
+
+### 🎯 Objetivos Generales
+
+- ✅ Implementar pipelines de CI/CD para aplicaciones MEAN
+- ✅ Dominar Docker y Kubernetes para contenedorización y orquestación
+- ✅ Desplegar aplicaciones en plataformas cloud (AWS, Railway, Heroku)
+- ✅ Configurar monitorización, logging y seguridad avanzada
+- ✅ Realizar pruebas de carga y estrés
+- ✅ Preparar portafolio profesional y entrevistas técnicas
+
+### 🛠️ Tecnologías Principales
+
+| Área | Tecnologías |
+|------|---------|
+| **CI/CD** | GitHub Actions, GitLab CI, Jenkins |
+| **Contenedorización** | Docker, Docker Compose |
+| **Orquestación** | Kubernetes, Helm |
+| **Cloud** | AWS (EC2, ECS, EKS), Railway, Heroku |
+| **Monitorización** | Prometheus, Grafana, ELK Stack |
+| **Testing** | Artillery, k6, Apache JMeter |
 
 ---
 
-## Clase 1: Introducción a DevOps y CI/CD
+## 📚 Contenido del Módulo
 
-### Objetivos
-- Comprender los principios fundamentales de DevOps
-- Configurar pipelines básicos de CI/CD
-- Automatizar procesos de integración y despliegue
+### [Clase 1: Introducción a DevOps y CI/CD](./clase%201/readme.md)
 
-### Temas Cubiertos
+**📍 Ubicación**: `clase 1/`
 
-#### 1. Introducción a DevOps
+**Temas**:
+- Introducción a DevOps y cultura DevOps
+- Principios de CI/CD (Integración y Entrega Continua)
+- Configuración de pipelines básicos con GitHub Actions
+- Automatización de testing y deployment
+- Despliegue en Producción
 
-DevOps es una filosofía cultural que elimina las barreras entre los equipos de desarrollo y operaciones, permitiendo que colaboren estrechamente para optimizar la productividad y confiabilidad. Los equipos trabajan de forma integrada, asumiendo responsabilidad compartida sobre todo el ciclo de vida del software y la infraestructura, pensando siempre en las necesidades del cliente.
+**Objetivos**:
+- Comprender los fundamentos de DevOps
+- Crear pipelines de CI/CD funcionales
+- Automatizar el proceso de desarrollo y despliegue
 
-<img width="847" height="502" alt="image" src="https://github.com/user-attachments/assets/77be9d49-b48a-4d48-af1f-c2fbc55c8242" />
+---
 
+### [Clase 2: Docker - Contenedores para Aplicaciones MEAN](./clase%202/readme.md)
 
-**Cambio Cultural DevOps:**
-- Eliminación las breachas entre desarrollo y operaciones
-- Comunicación frecuente y colaboración constante
-- Responsabilidad compartida del servicio completo
-- Integración de equipos de QA y seguridad
-- Visión holística del ciclo de vida del desarrollo
+**📍 Ubicación**: `clase 2/`
 
-**Ciclo de Vida DevOps:**
+**Temas**:
+- Fundamentos de Docker y contenedorización
+- Creación de Dockerfiles para aplicaciones MEAN
+- Docker Compose para orquestar múltiples servicios
+- Optimización de imágenes Docker
+- Networking y volúmenes en Docker
+- Best practices de seguridad
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                   CICLO DEVOPS                          │
-├─────────────────────────────────────────────────────────┤
-│  Plan → Code → Build → Test → Release → Deploy → Monitor│
-└─────────────────────────────────────────────────────────┘
-```
+**Objetivos**:
+- Containerizar aplicaciones MEAN completas
+- Gestionar entornos multi-contenedor
+- Implementar buenas prácticas de seguridad
 
-**Beneficios Clave:**
-- Innovación más rápida para los clientes
-- Entregas frecuentes pero pequeñas
-- Reducción de riesgos en cada implementación
-- Identificación y resolución rápida de errores
-- Mayor confiabilidad y velocidad en las actualizaciones
+**Proyecto Práctico**: Containerización completa de una aplicación MEAN (MongoDB, Express, Angular, Node.js)
 
-#### 2. Configuración de Pipelines Básicos
+---
 
-**¿Qué es un Pipeline?**
+### [Clase 3: Orquestación con Kubernetes](./clase%203/readme.md)
 
-Un pipeline es una secuencia automatizada de pasos (tareas) que se ejecutan de manera consecutiva para transformar el código fuente en una aplicación lista para producción. Es como una línea de montaje en la manufactura, donde cada etapa realiza una función específica y el resultado se pasa a la siguiente etapa.
+**📍 Ubicación**: `clase 3/`
 
-En el contexto de DevOps y CI/CD, un pipeline automatiza todo el ciclo de vida del software: desde que el código es enviado (commit) hasta que se despliega en los servidores de producción. Cada paso del pipeline ejecuta validaciones, pruebas y transformaciones automáticas, garantizando que el código cumpla con los estándares de calidad antes de llegar a producción.
+**Temas**:
+- Introducción a Kubernetes (K8s)
+- Arquitectura: Pods, Services, Deployments
+- ConfigMaps y Secrets
+- Ingress Controllers y Load Balancing
+- Scaling automático (HPA)
+- Helm Charts para gestión de aplicaciones
 
-**Características principales de un pipeline:**
-- **Automatización**: Las tareas se ejecutan sin intervención manual
-- **Secuencial**: Cada etapa se ejecuta en orden y solo continúa si la anterior fue exitosa
-- **Feedback Rápido**: Detección inmediata de errores en cualquier etapa
-- **Confiabilidad**: Asegura consistencia en cada despliegue
-- **Velocidad**: Reduce significativamente el tiempo de entrega
+**Objetivos**:
+- Desplegar aplicaciones MEAN en Kubernetes
+- Gestionar configuraciones y secretos
+- Implementar escalabilidad automática
 
-Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue del código, permitiendo entregas frecuentes, seguras y confiables. La combinación de microservicios y mayor frecuencia de publicación requiere automatización robusta para gestionar múltiples implementaciones.
+---
 
-**Arquitectura de un Pipeline:**
+### [Clase 4: Despliegue en Plataformas Cloud](./clase%204/readme.md)
 
-```
-Código → Compilación → Testing → Staging → Producción
-  ↓         ↓            ↓         ↓          ↓
- Git    Build Logs   Test Reports Deploy Logs Monitoring
-```
+**📍 Ubicación**: `clase 4/`
 
-**Prácticas Fundamentales:**
+**Temas**:
+- Despliegue en AWS (EC2, ECS, Elastic Beanstalk)
+- Configuración de bases de datos en AWS (RDS, DocumentDB)
+- Despliegue en Railway
+- Despliegue en Heroku
+- Gestión de dominios y SSL/TLS
+- Variables de entorno y configuración por ambiente
 
-**Integración Continua (CI)**
-- Automatización de pruebas en cada cambio
-- Validación de código inmediata
-- Generación de artefactos
-- Detección temprana de errores
+**Objetivos**:
+- Dominar múltiples plataformas de deployment
+- Configurar entornos de producción seguros
+- Gestionar bases de datos en la nube
 
-**Entrega Continua (CD)**
-- Despliegues frecuentes pero pequeños
-- Reducción de riesgo por implementación
-- Identificación rápida de problemas
-- Entregas confiables y predecibles
+---
 
-**Herramientas Comunes:**
-- GitHub Actions
-- GitLab CI/CD
-- Jenkins
-- CircleCI
+### [Clase 5: Monitorización y Logging](./clase%205/readme.md)
 
-**Documentación Oficial:**
-- [AWS](https://aws.amazon.com/es/devops/what-is-devops/)
+**📍 Ubicación**: `clase 5/`
+
+**Temas**:
+- Introducción a Prometheus y Grafana
+- Métricas y alertas
+- ELK Stack (Elasticsearch, Logstash, Kibana)
+- Application Performance Monitoring (APM)
+- Debugging en producción
+- Dashboards personalizados
+
+**Objetivos**:
+- Implementar sistemas de monitorización
+- Configurar alertas proactivas
+- Analizar logs y métricas de aplicaciones
+
+---
+
+### [Clase 6: Pruebas de Carga y Estrés](./clase%206/readme.md)
+
+**📍 Ubicación**: `clase 6/`
+
+**Temas**:
+- Fundamentos de performance testing
+- Herramientas: Artillery, k6, Apache JMeter
+- Escenarios de prueba realistas
+- Análisis de resultados y bottlenecks
+- Optimización de rendimiento
+
+**Objetivos**:
+- Realizar pruebas de carga efectivas
+- Identificar cuellos de botella
+- Optimizar aplicaciones para producción
+
+---
+
+### [Clase 7: Seguridad Avanzada y Best Practices](./clase%207/readme.md)
+
+**📍 Ubicación**: `clase 7/`
+
+**Temas**:
+- Seguridad en contenedores
+- Scanning de vulnerabilidades
+- Hardening de aplicaciones MEAN
+- Rate limiting y protección DDoS
+- Auditoría y compliance
+- OWASP Top 10 en aplicaciones MEAN
+
+**Objetivos**:
+- Implementar capas de seguridad robustas
+- Prevenir vulnerabilidades comunes
+- Cumplir con estándares de seguridad
+
+---
+
+### [Clase 8: Proyecto Final - Despliegue Empresarial](./clase%208/readme.md)
+
+**📍 Ubicación**: `clase 8/`
+
+**Proyecto Final**:
+- Desarrollo de aplicación MEAN
+- Implementación de CI/CD end-to-end
+- Containerización con Docker
+- Despliegue en Kubernetes
+- Monitorización y alertas
+- Pruebas de carga y optimización
+- Documentación técnica completa
+- Defensa técnica del proyecto
+
+**Entregables**:
+- Código fuente en repositorio Git
+- Pipeline CI/CD funcional
+- Aplicación desplegada en producción
+- Documentación técnica
+- Presentación y defensa del proyecto
+
+---
+
+## 📖 Recursos Adicionales
+
+### Documentación Oficial
+- [Docker Documentation](https://docs.docker.com/)
+- [Kubernetes Documentation](https://kubernetes.io/docs/)
+- [AWS Documentation](https://docs.aws.amazon.com/)
 - [GitHub Actions](https://docs.github.com/en/actions)
-- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
-- [Jenkins](https://www.jenkins.io/doc/)
-- [CircleCI](https://circleci.com/docs/)
 
-#### 3. Conceptos Clave
-
-**Arquitectura de Microservicios**
-- Desacoplamiento de sistemas complejos en servicios independientes
-- Cada servicio con propósito único y operación independiente
-- Reducción de coordinación necesaria para actualizaciones
-- Equipos pequeños responsables de servicios específicos
-- Mayor flexibilidad e innovación rápida
-
-**Infrastructure as Code (IaC)**
-- Gestión de infraestructura mediante código versionado
-- Automatización de provisioning y configuración
-- Reproducibilidad y consistencia en todos los ambientes
-- Control de cambios y auditoría completa
-
-**Monitoreo y Logging**
-- Supervisión del desempeño de aplicaciones e infraestructura
-- Reacción rápida ante problemas
-- Visibilidad completa del sistema
-- Feedback continuo para mejora
-
-**Automatización de Procesos**
-- Eliminación de tareas manuales repetitivas
-- Consistencia en implementaciones
-- Reducción de errores humanos
-- Aceleración del ciclo de entrega
+### Herramientas Recomendadas
+- Docker Desktop
+- kubectl y minikube
+- AWS CLI
+- Postman o Insomnia
+- Visual Studio Code con extensiones Docker y Kubernetes
 
 ---
 
-### Próximos Pasos
-Continúa con los temas de Docker, Kubernetes y despliegue en plataformas cloud.
+## 📋 Requisitos Previos
+
+- Conocimientos sólidos de JavaScript/TypeScript
+- Experiencia con MEAN stack (MongoDB, Express, Angular, Node.js)
+- Familiaridad con Git y control de versiones
+- Conocimientos básicos de línea de comandos
+- Servidor local (Node.js, MongoDB)
+
+---
+
+## 💼 Preparación Laboral
+
+Al finalizar este módulo, estarás preparado para:
+- **Roles Profesionales**: Full Stack Developer Senior, DevOps Engineer, Cloud Engineer, SRE
+- **Portfolio**: Creación de portafolio profesional en GitHub
+- **Entrevistas**: Preparación para entrevistas técnicas
+- **Empleabilidad**: LinkedIn, networking profesional, CV técnico
+
+---
+
+## 🎯 Ruta de Aprendizaje
+
+```
+┌──────────────────────────────────────────────────┐
+│  Fundamentos DevOps & CI/CD (Clase 1)  │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Docker & Containerización (Clase 2)    │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Kubernetes & Orquestación (Clase 3)    │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Cloud Deployment (Clase 4)             │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Monitorización & Logging (Clase 5)     │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Performance Testing (Clase 6)          │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Seguridad & Best Practices (Clase 7)   │
+└──────────────────┬───────────────────────────────┘
+                   ↓
+┌──────────────────────────────────────────────────┐
+│ Proyecto Final Empresarial (Clase 8)   │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+
+**¡Éxito en tu camino hacia convertirte en un experto Full Stack MEAN con DevOps!** 🚀
