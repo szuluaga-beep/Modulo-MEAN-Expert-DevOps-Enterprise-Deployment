@@ -1,0 +1,362 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="clusterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#326CE5;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#326CE5;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="masterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#326CE5;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34A853;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#0F9D58;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="podGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBC04;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#F9AB00;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#202124" text-anchor="middle">
+    Arquitectura de Kubernetes
+  </text>
+  
+  <!-- Kubernetes Cluster -->
+  <rect x="50" y="80" width="1100" height="680" rx="15" fill="url(#clusterGrad)" stroke="#326CE5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="600" y="115" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#326CE5" text-anchor="middle">
+    Kubernetes Cluster
+  </text>
+  
+  <!-- Control Plane / Master Node -->
+  <rect x="100" y="150" width="450" height="550" rx="10" fill="url(#masterGrad)" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="325" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+    Control Plane (Master Node)
+  </text>
+  
+  <!-- API Server -->
+  <rect x="130" y="210" width="180" height="80" rx="8" fill="white" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    API Server
+  </text>
+  <text x="220" y="260" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Punto de entrada
+  </text>
+  <text x="220" y="275" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    para todas las
+  </text>
+  <text x="220" y="290" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    operaciones REST
+  </text>
+  
+  <!-- Scheduler -->
+  <rect x="340" y="210" width="180" height="80" rx="8" fill="white" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="240" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    Scheduler
+  </text>
+  <text x="430" y="260" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Asigna pods a
+  </text>
+  <text x="430" y="275" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    nodos según
+  </text>
+  <text x="430" y="290" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    recursos disponibles
+  </text>
+  
+  <!-- Controller Manager -->
+  <rect x="130" y="310" width="180" height="80" rx="8" fill="white" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="340" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    Controller Manager
+  </text>
+  <text x="220" y="360" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Gestiona el estado
+  </text>
+  <text x="220" y="375" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    del cluster
+  </text>
+  
+  <!-- etcd -->
+  <rect x="340" y="310" width="180" height="80" rx="8" fill="white" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="430" y="340" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    etcd
+  </text>
+  <text x="430" y="360" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Base de datos
+  </text>
+  <text x="430" y="375" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    clave-valor
+  </text>
+  
+  <!-- Cloud Controller Manager -->
+  <rect x="235" y="410" width="180" height="80" rx="8" fill="white" stroke="#1967D2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="325" y="440" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    Cloud Controller
+  </text>
+  <text x="325" y="460" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Integración con
+  </text>
+  <text x="325" y="475" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    proveedores cloud
+  </text>
+  
+  <!-- kubectl -->
+  <rect x="235" y="530" width="180" height="80" rx="8" fill="#E8F0FE" stroke="#1967D2" stroke-width="2" stroke-dasharray="5,5" filter="url(#shadow)"/>
+  <text x="325" y="560" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1967D2" text-anchor="middle">
+    kubectl
+  </text>
+  <text x="325" y="580" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    CLI para interactuar
+  </text>
+  <text x="325" y="595" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    con el cluster
+  </text>
+  
+  <!-- Worker Nodes Section -->
+  <text x="850" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0F9D58" text-anchor="middle">
+    Worker Nodes
+  </text>
+  
+  <!-- Worker Node 1 -->
+  <rect x="620" y="210" width="230" height="220" rx="10" fill="url(#nodeGrad)" stroke="#0D652D" stroke-width="2" filter="url(#shadow)"/>
+  <text x="735" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Worker Node 1
+  </text>
+  
+  <!-- Kubelet -->
+  <rect x="640" y="250" width="85" height="60" rx="5" fill="white" stroke="#0D652D" stroke-width="1.5"/>
+  <text x="682" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0D652D" text-anchor="middle">
+    Kubelet
+  </text>
+  <text x="682" y="285" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    Agente del
+  </text>
+  <text x="682" y="298" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    nodo
+  </text>
+  
+  <!-- Kube-proxy -->
+  <rect x="745" y="250" width="85" height="60" rx="5" fill="white" stroke="#0D652D" stroke-width="1.5"/>
+  <text x="787" y="270" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0D652D" text-anchor="middle">
+    Kube-proxy
+  </text>
+  <text x="787" y="285" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    Proxy de
+  </text>
+  <text x="787" y="298" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    red
+  </text>
+  
+  <!-- Pods in Node 1 -->
+  <rect x="640" y="330" width="85" height="80" rx="5" fill="url(#podGrad)" stroke="#E37400" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="682" y="350" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+    Pod 1
+  </text>
+  <rect x="650" y="360" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="662" y="377" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C1
+  </text>
+  <rect x="680" y="360" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="692" y="377" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C2
+  </text>
+  <text x="682" y="400" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">
+    Containers
+  </text>
+  
+  <rect x="745" y="330" width="85" height="80" rx="5" fill="url(#podGrad)" stroke="#E37400" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="787" y="350" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+    Pod 2
+  </text>
+  <rect x="755" y="360" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="767" y="377" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C1
+  </text>
+  <rect x="785" y="360" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="797" y="377" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C2
+  </text>
+  <text x="787" y="400" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">
+    Containers
+  </text>
+  
+  <!-- Worker Node 2 -->
+  <rect x="620" y="460" width="230" height="220" rx="10" fill="url(#nodeGrad)" stroke="#0D652D" stroke-width="2" filter="url(#shadow)"/>
+  <text x="735" y="485" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Worker Node 2
+  </text>
+  
+  <!-- Kubelet -->
+  <rect x="640" y="500" width="85" height="60" rx="5" fill="white" stroke="#0D652D" stroke-width="1.5"/>
+  <text x="682" y="520" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0D652D" text-anchor="middle">
+    Kubelet
+  </text>
+  <text x="682" y="535" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    Agente del
+  </text>
+  <text x="682" y="548" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    nodo
+  </text>
+  
+  <!-- Kube-proxy -->
+  <rect x="745" y="500" width="85" height="60" rx="5" fill="white" stroke="#0D652D" stroke-width="1.5"/>
+  <text x="787" y="520" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0D652D" text-anchor="middle">
+    Kube-proxy
+  </text>
+  <text x="787" y="535" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    Proxy de
+  </text>
+  <text x="787" y="548" font-family="Arial, sans-serif" font-size="9" fill="#5f6368" text-anchor="middle">
+    red
+  </text>
+  
+  <!-- Pods in Node 2 -->
+  <rect x="640" y="580" width="85" height="80" rx="5" fill="url(#podGrad)" stroke="#E37400" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="682" y="600" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+    Pod 3
+  </text>
+  <rect x="650" y="610" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="662" y="627" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C1
+  </text>
+  <rect x="680" y="610" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="692" y="627" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C2
+  </text>
+  <text x="682" y="650" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">
+    Containers
+  </text>
+  
+  <rect x="745" y="580" width="85" height="80" rx="5" fill="url(#podGrad)" stroke="#E37400" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="787" y="600" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+    Pod 4
+  </text>
+  <rect x="755" y="610" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="767" y="627" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C1
+  </text>
+  <rect x="785" y="610" width="25" height="25" rx="3" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="797" y="627" font-family="Arial, sans-serif" font-size="8" fill="#E37400" text-anchor="middle">
+    C2
+  </text>
+  <text x="787" y="650" font-family="Arial, sans-serif" font-size="8" fill="white" text-anchor="middle">
+    Containers
+  </text>
+  
+  <!-- Services Box -->
+  <rect x="900" y="210" width="220" height="180" rx="10" fill="#E8F5E9" stroke="#0D652D" stroke-width="2" stroke-dasharray="5,5" filter="url(#shadow)"/>
+  <text x="1010" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0D652D" text-anchor="middle">
+    Services
+  </text>
+  <text x="1010" y="260" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Exponen pods como
+  </text>
+  <text x="1010" y="275" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    servicios de red
+  </text>
+  
+  <!-- Service Types -->
+  <rect x="920" y="295" width="170" height="25" rx="5" fill="white" stroke="#0D652D" stroke-width="1"/>
+  <text x="1005" y="312" font-family="Arial, sans-serif" font-size="10" fill="#0D652D" text-anchor="middle">
+    ClusterIP (interno)
+  </text>
+  
+  <rect x="920" y="330" width="170" height="25" rx="5" fill="white" stroke="#0D652D" stroke-width="1"/>
+  <text x="1005" y="347" font-family="Arial, sans-serif" font-size="10" fill="#0D652D" text-anchor="middle">
+    NodePort (externo)
+  </text>
+  
+  <rect x="920" y="365" width="170" height="25" rx="5" fill="white" stroke="#0D652D" stroke-width="1"/>
+  <text x="1005" y="382" font-family="Arial, sans-serif" font-size="10" fill="#0D652D" text-anchor="middle">
+    LoadBalancer (cloud)
+  </text>
+  
+  <!-- Volumes Box -->
+  <rect x="900" y="420" width="220" height="130" rx="10" fill="#FFF3E0" stroke="#E65100" stroke-width="2" stroke-dasharray="5,5" filter="url(#shadow)"/>
+  <text x="1010" y="445" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E65100" text-anchor="middle">
+    Volumes
+  </text>
+  <text x="1010" y="470" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    Almacenamiento
+  </text>
+  <text x="1010" y="485" font-family="Arial, sans-serif" font-size="11" fill="#5f6368" text-anchor="middle">
+    persistente para pods
+  </text>
+  
+  <rect x="920" y="500" width="170" height="25" rx="5" fill="white" stroke="#E65100" stroke-width="1"/>
+  <text x="1005" y="517" font-family="Arial, sans-serif" font-size="10" fill="#E65100" text-anchor="middle">
+    PersistentVolume (PV)
+  </text>
+  
+  <rect x="920" y="530" width="170" height="25" rx="5" fill="white" stroke="#E65100" stroke-width="1"/>
+  <text x="1005" y="547" font-family="Arial, sans-serif" font-size="10" fill="#E65100" text-anchor="middle">
+    PersistentVolumeClaim
+  </text>
+  
+  <!-- ConfigMaps & Secrets -->
+  <rect x="900" y="580" width="220" height="100" rx="10" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="2" stroke-dasharray="5,5" filter="url(#shadow)"/>
+  <text x="1010" y="605" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6A1B9A" text-anchor="middle">
+    Configuración
+  </text>
+  
+  <rect x="920" y="620" width="170" height="25" rx="5" fill="white" stroke="#6A1B9A" stroke-width="1"/>
+  <text x="1005" y="637" font-family="Arial, sans-serif" font-size="10" fill="#6A1B9A" text-anchor="middle">
+    ConfigMaps
+  </text>
+  
+  <rect x="920" y="650" width="170" height="25" rx="5" fill="white" stroke="#6A1B9A" stroke-width="1"/>
+  <text x="1005" y="667" font-family="Arial, sans-serif" font-size="10" fill="#6A1B9A" text-anchor="middle">
+    Secrets
+  </text>
+  
+  <!-- Arrows -->
+  <!-- kubectl to API Server -->
+  <path d="M 325 530 L 325 490" stroke="#1967D2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  
+  <!-- API Server to Scheduler -->
+  <path d="M 310 250 L 340 250" stroke="#1967D2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  
+  <!-- API Server to etcd -->
+  <path d="M 310 290 L 310 320 L 340 320" stroke="#1967D2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  
+  <!-- Master to Worker Nodes -->
+  <path d="M 550 350 L 620 350" stroke="#326CE5" stroke-width="3" fill="none" marker-end="url(#arrowgreen)" stroke-dasharray="5,5"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1967D2" />
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#0F9D58" />
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <text x="100" y="740" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#202124">
+    Leyenda:
+  </text>
+  <rect x="180" y="728" width="15" height="15" fill="url(#masterGrad)"/>
+  <text x="200" y="740" font-family="Arial, sans-serif" font-size="11" fill="#5f6368">
+    Control Plane
+  </text>
+  <rect x="300" y="728" width="15" height="15" fill="url(#nodeGrad)"/>
+  <text x="320" y="740" font-family="Arial, sans-serif" font-size="11" fill="#5f6368">
+    Worker Node
+  </text>
+  <rect x="420" y="728" width="15" height="15" fill="url(#podGrad)"/>
+  <text x="440" y="740" font-family="Arial, sans-serif" font-size="11" fill="#5f6368">
+    Pod
+  </text>
+  <rect x="500" y="728" width="15" height="15" fill="white" stroke="#E37400" stroke-width="1"/>
+  <text x="520" y="740" font-family="Arial, sans-serif" font-size="11" fill="#5f6368">
+    Container
+  </text>
+</svg>
