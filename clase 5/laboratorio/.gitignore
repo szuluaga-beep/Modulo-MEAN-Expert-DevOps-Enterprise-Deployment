@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+package-lock.json
+
+# Docker volumes
+prometheus_data/
+grafana_data/
+alertmanager_data/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
