@@ -2,7 +2,7 @@
 
 ## Introducción
 
-En esta clase final llevaremos nuestro proyecto MEAN a producción. Aprenderemos a containerizar con Docker, automatizar despliegues con GitHub Actions y alojar en plataformas cloud como Netlify (frontend) y Railway (backend).
+En esta clase final llevaremos nuestro proyecto MEAN a producción. Aprenderemos a containerizar con Docker, automatizar despliegues con GitHub Actions y desplegar completamente en Netlify (frontend + backend serverless) con MongoDB Atlas como base de datos.
 
 ---
 
