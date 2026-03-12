@@ -102,3 +102,4 @@ Debes entregar un Enlace del repositorio público que contenga:
 1. **URL pública del proyecto funcionando**
 2. **Captura de pantalla** del panel de control del proveedor elegido (Dashboard)
 3. **Breve reflexión** (máx. 100 palabras) sobre el mayor desafío que encontraste durante el despliegue
+4. **Opcional:** Si lograste desplegar el backend, incluye una prueba de que la API funciona (Postman o similar) con pantallazos de la respuesta
