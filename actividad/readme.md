@@ -67,8 +67,7 @@ Elige la ruta que mejor se adapte a tu proyecto:
 | Proveedor | Ideal para... | Dificultad |
 |-----------|---------------|-----------|
 | **Vercel** | Angular (Frontend) - Muy rápido y optimizado | Baja |
-| **Netlify** | Angular (Frontend) - Excelente gestión de formularios y assets | Baja |
-| **Railway** | Apps Fullstack (Node.js + Base de Datos) | Media |
+| **Netlify** | Angular (Frontend) + Express (Fullstack MEAN) | Media |
 
 ---
 
@@ -90,15 +89,15 @@ Independientemente del proveedor, el flujo recomendado es:
 Si tu portafolio incluye un backend con Node.js y MongoDB:
 
 - **Base de Datos:** Crea un clúster gratuito en [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-- **Backend:** Despliega tu API en Railway o Render
-- **Variables de Entorno:** No olvides configurar tu `MONGODB_URI` y `JWT_SECRET` en el panel de control del proveedor (Settings > Variables)
-- **CORS:** Asegúrate de que tu backend permita peticiones desde la URL de tu nuevo frontend
+- **Backend:** Despliega tu API en Netlify Functions
+- **Variables de Entorno:** No olvides configurar tu `MONGODB_URI` y `JWT_SECRET` en el panel de control de Netlify (Settings > Build & Deploy > Environment)
+- **Todo en Netlify:** Frontend y backend bajo el mismo dominio sin necesidad de CORS
 
 ---
 
 ## 📤 Formato de Entrega
 
-Debes entregar un archivo PDF o un README en tu repositorio que contenga:
+Debes entregar un Enlace del repositorio público que contenga:
 
 1. **URL pública del proyecto funcionando**
 2. **Captura de pantalla** del panel de control del proveedor elegido (Dashboard)
